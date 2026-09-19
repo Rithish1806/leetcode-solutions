@@ -7,8 +7,8 @@ class Solution {
         int[] result = new int[r*c];
         for(int i=0;i<result.length;i++){
             result[i] = mat[x][y];
-            if((x+y) % 2 == 0){
-                if(y == c-1) {
+            if((x+y)%2==0){
+                if(y == c-1){
                     x++;
                 }
                 else if(x==0){
@@ -23,7 +23,7 @@ class Solution {
                 if(x == r-1){
                     y++;
                 }
-                else if(y==0){
+                else if(y == 0){
                     x++;
                 }
                 else{
