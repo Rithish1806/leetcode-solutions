@@ -3,8 +3,8 @@ class Solution {
         if(mat.length == 0)return new int[0];
         int r = mat.length;
         int c = mat[0].length;
-        int x=0,y=0;
         int[] result = new int[r*c];
+        int x=0,y=0;
         for(int i=0;i<result.length;i++){
             result[i] = mat[x][y];
             if((x+y)%2==0){
@@ -23,7 +23,7 @@ class Solution {
                 if(x == r-1){
                     y++;
                 }
-                else if(y == 0){
+                else if(y==0){
                     x++;
                 }
                 else{
