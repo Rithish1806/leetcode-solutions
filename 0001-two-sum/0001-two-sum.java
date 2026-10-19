@@ -5,14 +5,13 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             int need = target - nums[i];
             if(map.containsKey(need)){
-                res[0]=map.get(need);
-                res[1]=i;
-                break;
+                res[0] = map.get(need);
+                res[1] = i;
             }
             else{
                 map.put(nums[i],i);
             }
         }
         return res;
-   }
+    }
 }
