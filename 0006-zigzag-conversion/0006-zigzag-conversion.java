@@ -1,14 +1,14 @@
 class Solution {
     public String convert(String s, int n) {
-        if(n == 1 || s.length()<n)return s;
+        if(n == 1 || s.length()<n) return s;
         int in = 0;
         int st = 1;
         StringBuilder[] rows = new StringBuilder[n];
         for(int i=0;i<n;i++){
-            rows[i] =  new StringBuilder();
+            rows[i] = new StringBuilder();
         }
-        for(char c:s.toCharArray()){
-            rows[in].append(c);
+        for(char ch:s.toCharArray()){
+            rows[in].append(ch);
             if(in == 0){
                 st = 1;
             }
@@ -17,10 +17,10 @@ class Solution {
             }
             in+=st;
         }
-        StringBuilder result = new StringBuilder();
-        for(StringBuilder sb : rows){
-            result.append(sb);
+        StringBuilder res = new StringBuilder();
+        for(int i=0;i<n;i++){
+            res.append(rows[i]);
         }
-        return result.toString();
+        return res.toString();
     }
 }
